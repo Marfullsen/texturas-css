@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        color:aliceblue;
+        font-family: 'Source Code Pro', monospace;
+        background: rgb(3, 57, 108);
+        background: url("/assets/img/patterns/black-linen.png") fixed,
+          linear-gradient(
+              113deg,
+              rgba(3, 57, 108, 1) 0%,
+              rgba(3, 57, 108, 1) 37%,
+              rgba(0, 91, 150, 1) 38%,
+              #005b96 63%,
+              rgba(100, 151, 177, 1) 64%
+            )
+            fixed;
+        background-position: bottom right, left, right;
+      }
+      section
+      {
+        display: flex;
+      }
+      button {
+          font-family: 'Source Code Pro', monospace;
+          background: #fd8c04;
+          color: ghostwhite;
+          border-radius: 55px;
+          height: 35px;
+          /*width: -webkit-fill-available;*/
+      }
+      article {
+          margin-top: 90px;
+          margin-bottom: 90px;
+          width: 33%;
+          height: 200px;
+          border-radius: 16px;
+      }
+      #d1 {
+          background: #005b96;
+          transform: rotate(23deg);
+          background-image: url("/assets/img/patterns/navy.png");
+      }
+      #d2 {
+        background: rgba(3, 57, 108, 1);
+        transform: rotate(23deg);
+        background-image: url("/assets/img/patterns/otis-redding.png");
+      }
+      #d3 {
+        background: rgba(100, 151, 177, 1);
+        transform: rotate(23deg);
+        background-image: url("/assets/img/patterns/classy-fabric.png");
+      }
+      .centrar {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+      footer {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        /*height:14px;*/
+      }
+    </style>
+    <title>Texturas en Azul</title>
+  </head>
+
+  <body>    
+    <header>
+        <nav>
+            <h1 class='centrar'>Texturas</h1>
+            <p class='centrar'>#005b96 / #03396c / #c6497b1</p>
+        </nav>
+    </header>
+    <section>
+        <article id="d1">
+            <p id='nombreDiseño1' class="centrar">navy</p>
+            <section class='centrar'>
+                <button onclick="nextPattern(0)">Siguiente</button>
+                <button onclick="lastPattern(0)">Anterior</button>
+            </section>
+        </article>
+        <article id="d2">
+            <p id='nombreDiseño2' class="centrar">otis-redding</p>
+            <section class='centrar'>
+                <button onclick="nextPattern(1)">Siguiente</button>
+                <button onclick="lastPattern(1)">Anterior</button>
+            </section>
+        </article>
+        <article id="d3">
+            <p id='nombreDiseño3' class="centrar">classy-fabric</p>
+            <section class='centrar'>
+                <button onclick="nextPattern(2)">Siguiente</button>
+                <button onclick="lastPattern(2)">Anterior</button>
+            </section>
+         </article>
+    </section>
+    <footer id='footer' class='centrar'>
+        <p>Marfullsen 2021</p>
+    </footer>
+    <script>
+        let patterns = ['black-linen.png', 'black-scales.png', 'black-thread-light.png', 'bo-play.png', 'buried.png', 'carbon-fibre-big.png', 'carbon-fibre-v2.png', 'classy-fabric.png', 'dark-wood.png', 'fake-luxury.png', 'foggy-birds.png', 'football-no-lines.png', 'gplay.png', 'green-fibers.png', 'green-gobbler.png', 'low-contrast-linen.png', 'moulin.png', 'nami.png', 'navy.png', 'otis-redding.png', 'outlets.png', 'pinstripe-light.png', 'random-grey-variations.png', 'real-carbon-fibre.png', 'rebel.png', 'retina-wood.png', 'shley-tree-1.png', 'skulls.png', 'soft-kill.png', 'straws.png', 'subtle-stripes.png', 'swirl.png', 'tasky.png', 'triangles.png', 'white-diamond.png'];
+        const TOTAL_PATTERNS = patterns.length;
+        let currentPattern = [0,0,0];
+        let ruta = '/assets/img/patterns/';
+        function nextPattern(recuadro){
+            if (currentPattern[recuadro] == TOTAL_PATTERNS) {
+                currentPattern[recuadro] = 0;
+            }
+            let divAffected = document.getElementById('d'+(recuadro+1))
+            divAffected.style.backgroundImage = 'url("' + ruta + patterns[currentPattern[recuadro]+1] + '")';
+            currentPattern[recuadro] += 1;
+            divAffected.firstElementChild.innerHTML = 'Sin patrón';
+            if (patterns[currentPattern[recuadro]]) {
+                divAffected.firstElementChild.innerHTML = patterns[currentPattern[recuadro]].slice(0,-4);
+            }
+            console.log('d'+(recuadro+1));
+            console.log('url("' + ruta + patterns[currentPattern[recuadro]+1] + '");');
+        }
+        function lastPattern(recuadro){
+            let divAffected = document.getElementById('d'+(recuadro+1))
+            if (currentPattern[recuadro] == -1) {
+                currentPattern[recuadro] = 0;
+            }
+            divAffected.style.backgroundImage = 'url("' + ruta + patterns[currentPattern[recuadro]-1] + '")';
+            currentPattern[recuadro] -= 1;
+            divAffected.firstElementChild.innerHTML = 'Sin patrón';
+            if (patterns[currentPattern[recuadro]]) {
+                divAffected.firstElementChild.innerHTML = patterns[currentPattern[recuadro]].slice(0,-4);
+            }
+            console.log(patterns[currentPattern[recuadro]])
+            console.log('d'+(recuadro-1));
+            console.log('url("' + ruta + patterns[currentPattern[recuadro]-1] + '");');
+        }
+    </script>
+  </body>
+</html>
