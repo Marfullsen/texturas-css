@@ -1,0 +1,61 @@
+body {
+  cursor: url('/assets/img/cursor/breeze-cursor.png'), auto;
+  color: aliceblue;
+  font-family: "Source Code Pro", monospace;
+  background: rgb(3, 57, 108);
+  background: url("/assets/img/patterns/black-linen.png") fixed,
+    linear-gradient(
+        113deg,
+        rgba(3, 57, 108, 1) 0%,
+        rgba(3, 57, 108, 1) 37%,
+        rgba(0, 91, 150, 1) 38%,
+        #005b96 63%,
+        rgba(100, 151, 177, 1) 64%
+      )
+      fixed;
+  background-position: bottom right, left, right;
+}
+section {
+  display: flex;
+}
+button {
+  font-family: "Source Code Pro", monospace;
+  background: #fd8c04;
+  color: ghostwhite;
+  border-radius: 55px;
+  height: 35px;
+  cursor:pointer;
+}
+article {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  width: 33%;
+  height: 200px;
+  border-radius: 16px;
+}
+#d1 {
+  background: #005b96;
+  transform: rotate(23deg);
+  background-image: url("/assets/img/patterns/black-thread-light.png");
+}
+#d2 {
+  background: rgba(3, 57, 108, 1);
+  transform: rotate(23deg);
+  background-image: url("/assets/img/patterns/bo-play.png");
+}
+#d3 {
+  background: rgba(100, 151, 177, 1);
+  transform: rotate(23deg);
+  background-image: url("/assets/img/patterns/black-scales.png");
+}
+.centrar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
