@@ -1,8 +1,8 @@
 # Texturas usando CSS
-[![Github.io](https://img.shields.io/badge/GitHub%20Pages-Texturas%20CSS-green.svg)](https://marfullsen.github.io/patrones-css/)
+[![Github.io](https://img.shields.io/badge/GitHub%20Pages-Texturas%20CSS-green.svg)](https://marfullsen.github.io/texturas-css/)
 [![JavaScript](https://img.shields.io/badge/Vanilla-JavaScript-yellow.svg)](https://www.javascript.com/)
 
-[![Screenshot](./screenshot-560x695.png)](https://Marfullsen.github.io/patrones-css/)
+[![Screenshot](./screenshot-560x695.png)](https://Marfullsen.github.io/texturas-css/)
 
 ## Descripción
 Mostrario web sobre diferentes tipos de texturas que se pueden aplicar sobre colores y fondos directamente desde css, únicamente usando imágenes de patrones con transparencia disponibles en este [link](https://www.transparenttextures.com/).
@@ -13,7 +13,7 @@ El objeto en cuestión lleva un color de fondo determinado, a este fondo se le a
 ## ¿Cómo uso la página de manera local en mi equipo?
 1. Descargar Zip o usar el comando `git clone`.
 ``` 
-git clone https://github.com/Marfullsen/patrones-css.git
+git clone https://github.com/Marfullsen/texturas-css.git
 ``` 
 2. Entrar a la carpeta en cuestión.
 ``` 
@@ -28,7 +28,7 @@ Siempre es bueno utilizar paletas al momento de diseñar páginas web, recomiend
 Para un mejor acabado recomiendo usar gradientes, una página muy util es [cssgradient](https://cssgradient.io/)
 
 ## ¡Visita la página!:
-[Marfullsen.github.io/patrones-css/](https://Marfullsen.github.io/patrones-css/)
+[Marfullsen.github.io/texturas-css/](https://Marfullsen.github.io/texturas-css/)
 
 ## Credito
 Gracias al sitio web [transparenttextures.com](https://www.transparenttextures.com/) por las increíbles texturas.
