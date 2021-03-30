@@ -17,8 +17,6 @@ function nextPattern(recuadro) {
       currentPattern[recuadro]
     ].slice(0, -4);
   }
-  //console.log("d" + (recuadro + 1));
-  //console.log('url("' + ruta + patterns[currentPattern[recuadro] + 1] + '");');
 }
 
 function lastPattern(recuadro) {
@@ -35,7 +33,4 @@ function lastPattern(recuadro) {
       currentPattern[recuadro]
     ].slice(0, -4);
   }
-  //console.log(patterns[currentPattern[recuadro]]);
-  //console.log("d" + (recuadro - 1));
-  //console.log('url("' + ruta + patterns[currentPattern[recuadro] - 1] + '");');
 }

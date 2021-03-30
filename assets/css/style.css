@@ -1,9 +1,9 @@
 body {
-  cursor: url('./assets/img/cursor/breeze-cursor.png'), auto;
+  cursor: url('../../assets/img/cursor/breeze-cursor.png'), auto;
   color: aliceblue;
   font-family: "Source Code Pro", monospace;
   background: rgb(3, 57, 108);
-  background: url("./assets/img/patterns/black-linen.png") fixed,
+  background: url("../../assets/img/patterns/black-linen.png") fixed,
     linear-gradient(
         113deg,
         rgba(3, 57, 108, 1) 0%,
@@ -36,17 +36,17 @@ article {
 #d1 {
   background: #005b96;
   transform: rotate(23deg);
-  background-image: url("./assets/img/patterns/black-thread-light.png");
+  background-image: url("../../assets/img/patterns/black-thread-light.png");
 }
 #d2 {
   background: rgba(3, 57, 108, 1);
   transform: rotate(23deg);
-  background-image: url("./assets/img/patterns/bo-play.png");
+  background-image: url("../../assets/img/patterns/bo-play.png");
 }
 #d3 {
   background: rgba(100, 151, 177, 1);
   transform: rotate(23deg);
-  background-image: url("./assets/img/patterns/black-scales.png");
+  background-image: url("../../assets/img/patterns/black-scales.png");
 }
 .centrar {
   display: flex;
